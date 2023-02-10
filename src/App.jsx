@@ -15,7 +15,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setInitNote(initNotes.concat({notes: note}));
+    setInitNote(initNotes.concat({note: notes}));
     setNote('')
   }
 
@@ -28,6 +28,7 @@ function App() {
       <br />
       <button type='submit' className='border border-black w-[7rem] h-[2.5rem] rounded-[50%] text-[#810D0D] mx-[23rem] my-[1rem] font-[600]'>Add</button>
 
+      </form>
       <div className='my-[2rem]'>
         {initNotes.map((initNote, index) =>(
           <ul key={`${initNote.note} - ${index}`}>
@@ -35,7 +36,6 @@ function App() {
           </ul>
         ))}
       </div>
-      </form>
     </div>
   )
 }
